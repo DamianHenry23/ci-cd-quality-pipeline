@@ -1,0 +1,39 @@
+
+# ============================================================
+# CI/CD QUALITY PIPELINE
+# GitHub Actions Workflow
+# ============================================================
+
+name: Quality Check
+
+# Run the workflow whenever code is pushed to GitHub
+on:
+  push:
+
+# Define the job
+jobs:
+  quality-test:
+
+    # Use an Ubuntu virtual machine
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Get the project code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Install Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Install project dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run the quality test
+      - name: Run quality test
+        run: node tests/quality-check.js
+
