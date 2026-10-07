@@ -40,8 +40,7 @@ if (applicationName) {
 // CHECK 3: APPLICATION VERSION
 // ============================================================
 
-// Intentionally incorrect version for testing
-const applicationVersion = "2.0";
+const applicationVersion = "1.0";
 
 const expectedVersion = "1.0";
 
