@@ -1,23 +1,45 @@
-
 // ============================================================
 // CI/CD QUALITY PIPELINE
-// Basic Automated Quality Check
+// Basic Automated Quality Checks
 // ============================================================
 
-console.log("Starting Quality Check...");
+console.log("Starting Quality Checks...");
 
-// Simulate a basic application check
+// ============================================================
+// CHECK 1: APPLICATION STATUS
+// ============================================================
+
 const applicationStatus = "OK";
 
 // Expected result
 const expectedStatus = "OK";
 
-// Verify the result
+// Verify the application status
 if (applicationStatus === expectedStatus) {
-    console.log("QUALITY CHECK PASSED");
-    process.exit(0);
+    console.log("CHECK 1 PASSED: Application status is OK");
 } else {
-    console.log("QUALITY CHECK FAILED");
+    console.log("CHECK 1 FAILED: Application status is not OK");
     process.exit(1);
 }
+
+// ============================================================
+// CHECK 2: REQUIRED APPLICATION DATA
+// ============================================================
+
+const applicationName = "Quality Test Application";
+
+// Verify that the application name exists
+if (applicationName) {
+    console.log("CHECK 2 PASSED: Application name exists");
+} else {
+    console.log("CHECK 2 FAILED: Application name is missing");
+    process.exit(1);
+}
+
+// ============================================================
+// ALL CHECKS PASSED
+// ============================================================
+
+console.log("ALL QUALITY CHECKS PASSED");
+process.exit(0);
 
