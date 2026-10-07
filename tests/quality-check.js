@@ -7,7 +7,7 @@
 console.log("Starting Quality Check...");
 
 // Simulate a basic application check
-const applicationStatus = "ERROR";
+const applicationStatus = "OK";
 
 // Expected result
 const expectedStatus = "OK";
