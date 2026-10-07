@@ -40,7 +40,9 @@ if (applicationName) {
 // CHECK 3: APPLICATION VERSION
 // ============================================================
 
-const applicationVersion = "1.0";
+// Intentionally incorrect version for testing
+const applicationVersion = "2.0";
+
 const expectedVersion = "1.0";
 
 // Verify that the application version is correct
@@ -57,6 +59,8 @@ if (applicationVersion === expectedVersion) {
 
 console.log("ALL QUALITY CHECKS PASSED");
 process.exit(0);
+
+
 
 
 
