@@ -1,4 +1,3 @@
-
 # ============================================================
 # CI/CD QUALITY PIPELINE
 # GitHub Actions Workflow
@@ -28,12 +27,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       # Install project dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      # Run the quality test
-      - name: Run quality test
+      # Run the quality tests
+      - name: Run quality tests
         run: node tests/quality-check.js
+        
 
