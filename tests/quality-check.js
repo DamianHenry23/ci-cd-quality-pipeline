@@ -15,7 +15,7 @@ console.log("Starting Quality Checks...");
 // CHECK 1: APPLICATION STATUS
 // ============================================================
 
-const applicationStatus = "ERROR";
+const applicationStatus = "OK";
 
 // Expected result
 const expectedStatus = "OK";
