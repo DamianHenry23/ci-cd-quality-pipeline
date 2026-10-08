@@ -8,6 +8,7 @@ name: Quality Check
 # Run the workflow whenever code is pushed to GitHub
 on:
   push:
+  pull_request:
 
 # Define the job
 jobs:
