@@ -5,21 +5,17 @@
 
 name: Quality Check
 
-# Run the workflow whenever code is pushed to GitHub
+# Run when code is pushed or a pull request is created/updated
 on:
   push:
   pull_request:
 
-# Define the job
 jobs:
   quality-test:
-
-    # Use an Ubuntu virtual machine
     runs-on: ubuntu-latest
 
     steps:
-
-      # Get the project code
+      # Download the repository code
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -34,8 +30,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Run the quality tests
-      - name: Run quality tests
-        run: node tests/quality-check.js
+      # Run the Jest automated tests
+      - name: Run Jest tests
+        run: npm test
+
+        
+
         
 
