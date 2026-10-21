@@ -1,3 +1,4 @@
+
 {
   "name": "ci-cd-quality-pipeline",
   "version": "1.0.0",
@@ -14,3 +15,4 @@
     "jest": "^30.5.2"
   }
 }
+
